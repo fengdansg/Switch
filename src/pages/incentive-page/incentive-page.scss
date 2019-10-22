@@ -1,0 +1,97 @@
+page-incentive-page {
+
+  .rowborder{
+    border-bottom: 0.55px solid #c8c7cc;
+    padding-bottom: 3px;
+
+  }
+.dividerTitle{
+  border-bottom:0.55px solid #c8c7cc;
+  padding-bottom:5px;
+  font-size:16px;
+  font-weight: bold;
+  color:#294f66;
+  padding-bottom:8px;
+}
+  .subTitle{
+    padding-left:16px!important;
+    font-size:16px;
+    color:#294f66;
+    font-weight:bold;
+    text-align:left;
+    min-height: 2.8rem;
+    border-bottom:0.55px solid #c8c7cc;
+    padding-top:6px;
+
+  }
+  .utilityIcon{
+    padding:0px;
+    padding-left:10px;
+    padding-bottom:4px;
+    text-align: center;
+    font-size: 35px;
+    font-weight:600;
+    vertical-align:middle;
+
+  }
+  .totalC{
+    padding:2px;
+    font-size:35px;
+    text-align:right;
+    font-weight:600;
+    vertical-align:middle;
+
+  }
+  .unitStyle{
+    padding:2px;
+    padding-bottom:5px;
+    height:100%;
+    text-align:left;
+    font-weight:600;
+    font-size:12px;
+
+  }
+  .rankL{
+    text-align:right;
+    padding:2px;
+    padding-bottom:0;
+    font-weight:600;
+    font-size:12px;
+  }
+  .rankN{
+    text-align:right;
+    padding:2px;
+    font-weight:600;
+    padding-top:0;
+
+    font-size:35px;
+  }
+
+  .itempadding{
+    padding-left:10px!important;
+    padding-right:10px!important;
+    min-height:4.3rem;
+
+  }
+  .icon2{
+    color: #294f66;
+    font-size:20px;
+    padding-left:16px;
+  }
+  .consMonths{
+    color: #294f66;
+    font-size: 16px;
+    font-weight:500;
+  }
+  .incentM{
+    color: #294f66;
+    font-size: 16px;
+    font-weight:500;
+  }
+
+  .item-inner{
+    padding-right:0px!important;
+    padding-left:0px!important;
+  }
+
+}

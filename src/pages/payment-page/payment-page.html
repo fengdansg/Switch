@@ -1,0 +1,83 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title color="light">Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#EEEEEE" >
+
+  <ion-card style="margin:20px 25px; width:calc(100% - 50px)">
+    <ion-row style="padding-top:10px;padding-left:0px">
+      <ion-col style="padding:0;">
+        <canvas height="75px" width="350px" style="width:57.1%;height:91.76%" #dateLabelCanvas></canvas>
+      </ion-col>
+
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col col-6 align="right"  style="color:#626060; font-size:20px;padding-top:9px;padding-bottom:0">
+        $
+      </ion-col>
+
+      <ion-col col-6 align="left"  style="color:#626060; font-size:45px;font-weight:500;padding-left:0;padding-top:0;padding-bottom:0">
+        128.26
+      </ion-col>
+
+    </ion-row>
+  </ion-card >
+
+  <ion-card style="margin:20px 25px; width:calc(100% - 50px)">
+
+    <ion-row style="margin-top:8px;background-color:#294f66">
+      <ion-col col-5 align="left" style="padding-left:6px;color:#FFFFFF;font-weight:600;font-size:14px;padding-top:14px;">
+        Amount Payable:
+      </ion-col>
+      <ion-col col-1 align="right" style="color:#FFFFFF;font-size:20px;padding-top:14px;">
+        $
+      </ion-col>
+      <ion-col col-6 align="left"  style="color:#FFFFFF; font-size:45px;font-weight:500;padding-left:0;">
+        128.26
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6 align="left" style="color:#294f66; font-size:14px;padding-left:6px;font-weight:600">
+        Payment Due:
+      </ion-col>
+      <ion-col col-6 align="right" style="color:#303030;font-size:20px;padding-right:16px;font-weight:bold">
+        13 Jul 2017
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-list>
+    <button ion-item detail-none style="width:100%;height:100%" vertical-align="middle">
+      <ion-row vertical-align="middle">
+        <ion-col col-2 vertical-align="middle">
+          <ion-avatar><img src="assets/images/GIROLogo.png" ></ion-avatar>
+        </ion-col >
+        <ion-col col-9 vertical-align="middle" style="padding-top:12px;">
+          XXX-XXX-458-8
+        </ion-col>
+        <ion-col col-1>
+          <ion-icon icon-only name="arrow-forward" style="padding-top:8px"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+    </button>
+  </ion-list>
+
+  <button ion-button  no-padding class="addPaymentButton" text-center (click)="addPayment()">Add Payment Methods</button>
+
+</ion-content>

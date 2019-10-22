@@ -1,0 +1,239 @@
+page-home {
+  .legend1{
+    position:absolute;
+    padding-top:4px;
+    left:3%;
+    top:0%;
+    font-size:14px;
+    font-weight:600;
+    z-index: 1;
+  }
+  .card-ios{
+    margin-top:10px;
+    margin-left:10px;
+    width:calc(100% - 20px);
+  }
+
+  .card-wp{
+    margin:10px;
+    width:calc(100% - 20px);
+  }
+  .card-md{
+    margin-top:0;
+    margin-bottom:8px;
+  }
+  .datetime-md{
+    padding:10px 8px 8px 16px;
+  }
+  .datetime-ios{
+    padding:10px 8px 6px 16px;
+  }
+
+  .datetime-wp{
+    padding:10px 8px 8px 16px;
+  }
+  .button-ios{
+    margin: 0.2rem 0.2rem;
+    padding: 0 1em;
+    height: 2.3em;
+
+  }
+  .datetime-text{
+    color: #294f66 ;
+    font-weight: bold;
+    font-size:15px;
+  }
+  .segment-md .segment-button{
+    height:3.2rem;
+    line-height:3rem;
+    font-size:1.4rem;
+    ion-icon{
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  .segment-ios .segment-button{
+    height:2.8rem;
+    line-height:2.5rem;
+    font-size:1.4rem;
+    ion-icon{
+      font-size:2.2rem;
+      line-height:2.5rem;
+    }
+  }
+
+
+.selectUtility{
+  height: 50%;
+
+}
+.legendicon1{
+  margin-left: 5px;
+  margin-top:2px;
+  margin-bottom:2px;
+
+}
+
+.legendicon2{
+  margin-left: 10px;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+
+.legendtext1{
+  margin-left:8px;
+  color:  #f0a007;
+  font-size:90%;
+  font-weight:bold;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+
+.legendtext2{
+  margin-left:8px;
+  color: #66c6ba;
+  font-size:90%;
+  font-weight:bold;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+.legendtext3{
+  margin-left:8px;
+  color: #f27767;
+  font-size:90%;
+  font-weight:bold;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+.averageline{
+  margin-top:2px;
+  margin-bottom:2px;
+  font-size: 80%;
+  font-weight: bold;
+  position: absolute;
+  right: 14px;
+}
+.re_button{
+  font-size: 90%;
+  font-weight:bold;
+}
+.dchartTitle{
+  margin:0;
+  font-size:150%;
+  font-weight: bold;
+  font-family: 'Helvetica';
+  color: black;
+  text-align: center;
+}
+.dchart_small{
+ min-height: 16px;
+
+}
+.timelabel{
+  height:40px;
+  text-align:center;
+
+
+}
+.dchartTitle1{
+  margin:0;
+  font-size:80%;
+  font-family:'Helvetica';
+  color:black;
+  text-align:center;
+  min-height:16px;
+
+}
+.dchart_1{
+  margin-top:40px;
+}
+.dchart_2{
+  margin-top:65px;
+}
+.usage{
+  font-size:100%;
+  font-weight: bold;
+  font-family: 'Helvetica';
+  color: black;
+  text-align: center;
+}
+.text_m{
+  font-size: 80%;
+}
+
+
+.card-md.gaugeCard{
+  position: relative;
+  padding-left: 14%;
+  height: 55vw;
+
+  top: 0%;
+  padding-right: 14%;
+
+}
+
+.card-ios.gaugeCard {
+  position: relative;
+  margin-top:20px;
+ padding-left: 14%;
+  padding-right: 14%;
+  height:  55vw ;
+  top:0%;
+
+
+
+}
+
+.card-wp.gaugeCard {
+  position: relative;
+  padding-left: 14%;
+  padding-right: 14%;
+
+  height: 55vw;
+  top: 0%;
+
+}
+
+
+
+.labelCanvas{
+ overflow:hidden;
+  display:block;
+  height:100%;
+  width:100%;
+}
+
+.verticalView{
+  overflow:hidden;
+  display:block;
+  height:100%;
+  width:100%;
+}
+  .divSize{
+    width:100%;
+    height:100%;
+    position:absolute;
+  }
+  .gaugeStyle{
+    position:absolute;
+    left: 14.77%;
+    right:14.77%;
+    top: 15%;
+    z-index: 0;
+    margin:0;
+
+
+  }
+/*.gaugeCanvas,.labelCanvas{
+  display:block;
+  position:relative;
+}*/
+}
+.label{
+  padding:0px 0px 0px 0px;
+  margin:0;
+}
+.item-inner{
+
+}

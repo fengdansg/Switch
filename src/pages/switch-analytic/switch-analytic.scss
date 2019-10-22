@@ -1,0 +1,70 @@
+page-switch-analytic {
+  .re_button{
+    font-size: 90%;
+    font-weight:bold;
+  }
+  .timelabel{
+    height:40px;
+    text-align:center;
+  }
+
+
+
+
+
+  .card-ios{
+    margin-top:10px;
+    margin-left:10px;
+    width:calc(100% - 20px);
+  }
+
+  .card-wp{
+    margin:10px;
+    width:calc(100% - 20px);
+  }
+  .card-md{
+    margin-top:0;
+    margin-bottom:8px;
+  }
+  .datetime-md{
+    padding:10px 8px 8px 16px;
+  }
+  .datetime-ios{
+    padding:10px 8px 6px 16px;
+  }
+
+  .datetime-wp{
+    padding:10px 8px 8px 16px;
+  }
+  .button-ios{
+    margin: 0.2rem 0.2rem;
+    padding: 0 1em;
+    height: 2.3em;
+
+  }
+  .datetime-text{
+    color: #294f66 ;
+    font-weight: bold;
+    font-size:15px;
+  }
+  .segment-md .segment-button{
+    height:3.2rem;
+    line-height:3rem;
+    font-size:1.4rem;
+    ion-icon{
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  .segment-ios .segment-button{
+    height:2.8rem;
+    line-height:2.5rem;
+    font-size:1.4rem;
+    ion-icon{
+      font-size:2.2rem;
+      line-height:2.5rem;
+    }
+  }
+
+}

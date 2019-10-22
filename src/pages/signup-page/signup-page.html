@@ -1,0 +1,108 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title color="light">Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row align="center">
+    <ion-col align="center">
+      <ion-avatar style="width:30%;margin-left:35%; margin-top:5%;margin-bottom:5%;" align="center">
+        <img src="assets/images/EMAtask2-login.png">
+      </ion-avatar>
+    </ion-col>
+  </ion-row>
+
+  <ion-card class="loginCard">
+    <ion-row align="center" style="margin:16px;">
+      <ion-col>
+
+        <ion-row>
+          <ion-col style="padding:3px 0 " col-2>
+            <ion-avatar>
+              <img src="assets/images/Profile.png" >
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-10 style="padding-left:16px; " vertical-align="middle">
+            <ion-item style="min-height:2rem;border-radius:5px; font-size:16px;" vertical-align="middle">
+              <ion-label style="min-height:1rem;"></ion-label>
+              <ion-input style="min-height:1rem; font-size:16px;.text-input{margin:8px;}" type="text" placeholder="Enter Account No" vertical-align="middle"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row style="padding-top:10px;">
+          <ion-col style="padding:3px 0 " col-2>
+            <ion-avatar>
+              <img src="assets/images/email.png">
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-10 style="padding-left:16px; " vertical-align="middle">
+            <ion-item style="min-height:2rem;border-radius:5px; font-size:16px;" vertical-align="middle">
+              <ion-label></ion-label>
+              <ion-input style="min-height:1rem; font-size:16px;.text-input{margin:8px;}" type="text" placeholder="Enter Password"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row style="padding-top:10px;">
+          <ion-col style="padding:3px 0 " col-2>
+            <ion-avatar>
+              <img src="assets/images/password.png">
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-10 style="padding-left:16px; " vertical-align="middle">
+            <ion-item style="min-height:2rem;border-radius:5px; font-size:16px;" vertical-align="middle">
+              <ion-label></ion-label>
+              <ion-input style="min-height:1rem; font-size:16px;.text-input{margin:8px;}" type="text" placeholder="Enter Password"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row style="padding-top:10px;">
+          <ion-col style="padding:3px 0 " col-2>
+            <ion-avatar>
+              <img src="assets/images/phone.png">
+            </ion-avatar>
+          </ion-col>
+          <ion-col col-10 style="padding-left:16px; " vertical-align="middle">
+            <ion-item style="min-height:2rem;border-radius:5px; font-size:16px;" vertical-align="middle">
+              <ion-label></ion-label>
+              <ion-input style="min-height:1rem; font-size:16px;.text-input{margin:8px;}" type="text" placeholder="Enter Password"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+
+  <ion-row>
+    <ion-col>
+      <button ion-button class="login-button" (click)="login()" round outline >Continue</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row align="center" vertical-align="middle">
+    <ion-col col-8 align="right" vertical-align="middle" style="color:#a3a3a3; font-weight:bold;font-size:14px; padding-top:11px;">
+      ALREADY HAVE AN ACCOUNT
+    </ion-col>
+    <ion-col col-4 align="left" vertical-align="middle" style="padding-top:0;">
+      <button ion-button clear no-margin no-padding style=" color:#294f66;font-size:14px" text-center (click)="openLogin()">SIGN IN</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

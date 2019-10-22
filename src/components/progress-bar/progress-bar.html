@@ -1,0 +1,18 @@
+<!-- Generated template for the ProgressBar component -->
+<div class="progress-outer" [style.border-color]="myColor">
+  <ion-row no-padding no-margin>
+    <ion-col no-padding no-margin col-6>
+      <div class="progress-inner" [style.width]="progress + '%'" [style.background-color]="myColor">
+      </div>
+    </ion-col>
+    <ion-col no-padding no-margin class="numbertext" [style.color]="textCol" col-6 *ngIf="unitD=='W'">
+      {{powerCons}}W
+    </ion-col>
+    <ion-col no-padding no-margin class="numbertext" [style.color]="textCol" col-6 *ngIf="unitD=='$'">
+      $ {{powerCons}}
+    </ion-col>
+  </ion-row>
+
+
+
+</div>

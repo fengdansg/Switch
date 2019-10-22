@@ -1,0 +1,38 @@
+page-add-payment-page {
+  .input-placeholder{
+    text-align:end;
+  }
+ .text-input{
+   text-align:end;
+  }
+  .list-header-md {
+    border-bottom: 1px solid #dedede;
+    padding-top:10px;
+  }
+
+  .listTitle{
+    color:#294f66;
+    margin:0;
+    font-weight:normal;
+    font-size:18px;
+  }
+
+  .listHeader{
+
+  }
+
+  .checkMark{
+    font-size:18px;
+    color:#79a5b1;
+    font-weight:800
+  }
+
+  .submitButton{
+    margin-bottom:25px;
+    margin-left:15px;
+    background-color:#294f66;
+    color:#FFFFFF;
+    font-size:18px;
+    width:calc(100% - 30px);
+  }
+}

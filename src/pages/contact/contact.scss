@@ -1,0 +1,59 @@
+page-contact {
+
+  .textBox{
+    background-color:#FFFFFF;
+    margin-left:20px;
+    border-color:#BBBBBB;
+    width:calc(100% - 40px);
+    height:26%;
+    font-size:16px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:3px;
+    padding-bottom:6px;
+    margin-top:10px;
+    margin-bottom:10px;
+    .text-input-ios{
+      font-size:16px;
+      margin-top:3px;
+      height:100%;
+    }
+    .text-input-md{
+      font-size:16px;
+      margin-top:3px;
+      height:100%;
+    }
+  }
+
+  .contactCard{
+    margin-left:20px;
+    width:calc(100% - 40px);
+    margin-top:20px;
+    padding-left:16px;
+    padding-top:12px;
+    padding-bottom:12px;
+  }
+  .contactTitle{
+    font-size: 20px;
+    font-weight:600;
+  }
+
+  .cardText{
+    font-size:16px;
+  }
+  .textboxTitle{
+    font-size:14px;
+    margin-top:20px;
+    padding-top:12px;
+    padding-left:22px;
+  }
+  .faqButton{
+    margin-left:20px;
+    border-width:2px;
+    margin-top:10px;
+    text-decoration:underline;
+    font-size:18px;
+    font-weight:500;
+
+  }
+}

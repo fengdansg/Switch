@@ -1,0 +1,47 @@
+page-setting-page {
+
+  .list-header-md {
+    border-bottom: 1px solid #dedede;
+    padding-top:10px;
+  }
+  .text-input-md {
+
+   margin:0px 8px 0 0;
+    text-align:end;
+    width: calc(100% - 8px - 8px);
+  }
+
+  .text-input-ios{
+    text-align:end;
+    margin:0px 8px 0 0;
+    height:100%
+  }
+
+  .list-md .item-input:last-child {
+    border-bottom: 0.55px solid #dedede;
+  }
+
+
+  .inputValue{
+ .item.item-block{
+  min-height:2.5rem;
+ }
+  }
+
+  .finalbutton{
+    margin-top:20px;
+    margin-bottom:60px;
+  }
+
+  .iconRange{
+    font-size:25px;
+    color:#294f66;
+  }
+
+  .rangeTitle{
+      padding-right:16px;
+      //background-color:#FFFFFF;
+    // border-bottom:0.55px solid #c8c7cc;
+
+  }
+}

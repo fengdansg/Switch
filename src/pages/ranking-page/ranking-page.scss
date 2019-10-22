@@ -1,0 +1,135 @@
+page-ranking-page {
+  $animation-duration: 3s;
+  .rankTitle{
+    font-size:16px;
+    color: #294f66;
+    font-weight:bold;
+    text-align: center;
+    min-height: 4rem;
+    margin-left:10px;
+    margin-right:10px;
+    width:calc(100% - 20px);
+    border-bottom:0.55px solid #c8c7cc!important;
+
+  }
+
+  .rowborder{
+    border-bottom: 0.55px solid #c8c7cc;
+    padding-bottom: 3px;
+  }
+
+  .subTitle{
+    padding-left:16px!important;
+    font-size:16px;
+    color:#294f66;
+    font-weight:bold;
+    text-align:left;
+    min-height: 2.8rem;
+    border-bottom:0.55px solid #c8c7cc;
+    padding-top:6px;
+
+  }
+.sharebutton{
+  font-size:14px;
+  margin-right:3px;
+}
+  .carddesign{
+    margin: 20px 20px 20px 20px;
+    width: calc(100% - 40px);
+  }
+  .monthRanking{
+    background-color:#294f66;
+    color:#ffffff;
+    padding:0!important;
+    font-weight:600;
+    margin:0;
+
+  }
+  .utilityIcon{
+    padding:2px;
+    padding-bottom:4px;
+    text-align: center;
+    font-size: 35px;
+    font-weight:600;
+    vertical-align:middle;
+
+  }
+.totalC{
+  padding:2px;
+  font-size:35px;
+  text-align:right;
+  font-weight:600;
+  vertical-align:middle;
+
+}
+  .unitStyle{
+    padding:2px;
+    padding-bottom:5px;
+    height:100%;
+    text-align:left;
+    font-weight:600;
+    font-size:12px;
+
+  }
+  .rankL{
+    text-align:right;
+    padding:2px;
+    padding-bottom:0;
+    font-weight:600;
+    font-size:12px;
+  }
+  .rankN{
+    text-align:right;
+    padding:2px;
+    font-weight:600;
+    padding-top:0;
+
+    font-size:35px;
+  }
+  .card .list .item{
+    padding-left:10px;
+    padding-right:10px;
+
+
+  }
+  .itempadding{
+    padding-left:10px!important;
+    padding-right:10px!important;
+  }
+.item-inner{
+  padding-right:0px!important;
+  padding-left:0px!important;
+}
+
+  .ion-accordion{
+    display:block;
+    transition-property:height;
+    transition-duration:0.9s;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.9s ease-in-out;
+
+    overflow:hidden;
+
+
+
+  }
+
+
+
+
+.arrowIcon{
+/*  will-change: transform;
+  transition: transform $animation-duration ease;
+
+  &.rotate {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }*/
+}
+}
+
+

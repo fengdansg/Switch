@@ -1,0 +1,281 @@
+<!--
+  Generated template for the RankingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title color = "light" >
+      Ranking
+    </ion-title>
+
+    <ion-buttons left>
+      <button ion-button icon-only (click)="viewMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showShareSheet()" class="sharebutton">
+        <ion-icon name="md-share" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+  <ion-card class="carddesign">
+    <ion-list>
+      <ion-item class="rankTitle" no-margin no-padding>
+        {{billDate()}} - Today
+      </ion-item>
+
+
+      <ion-item  no-padding>
+        <ion-row align-items-end class="rowborder">
+          <ion-col col-1 class ="utilityIcon">
+            <ion-icon icon-only name="flash" color="ele"></ion-icon>
+          </ion-col>
+
+          <ion-col col-4 align="right" class="totalC" style="color:#f0a007">
+            179
+          </ion-col>
+
+          <ion-col col-2 align="left" class="unitStyle" style="color:#f0a007" >
+            kWh
+          </ion-col>
+
+          <ion-col col-5 align="top" no-margin no-padding  style="color:#f0a007">
+            <ion-row >
+              <ion-col class="rankL">
+                Rank A
+              </ion-col>
+            </ion-row >
+            <ion-row  >
+              <ion-col class="rankN">
+                1156
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <ion-item  no-padding>
+        <ion-row align-items-end class="rowborder">
+          <ion-col col-1 class ="utilityIcon" style="font-size: 30px;">
+            <ion-icon icon-only name="water" color="water"></ion-icon>
+          </ion-col>
+
+          <ion-col col-4 align="right" class="totalC" style="color:#66c6ba; ">
+            16.2
+          </ion-col>
+
+          <ion-col col-2 align="left" class="unitStyle" style="color:#66c6ba" >
+            Cu M
+          </ion-col>
+
+          <ion-col col-5 align="top" no-margin no-padding  style="color:#66c6ba">
+            <ion-row >
+              <ion-col class="rankL">
+                Rank B
+              </ion-col>
+            </ion-row >
+            <ion-row  >
+              <ion-col class="rankN">
+                1867
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <ion-item  no-padding >
+        <ion-row align-items-end >
+          <ion-col col-1 class ="utilityIcon">
+            <ion-icon icon-only name="flame" color="gas"></ion-icon>
+          </ion-col>
+
+          <ion-col col-4 align="right" class="totalC" style="color:#f27767 ">
+            79
+          </ion-col>
+
+          <ion-col col-2 align="left" class="unitStyle" style="color:#f27767 " >
+            kWh
+          </ion-col>
+
+          <ion-col col-5 align="top" no-margin no-padding  style="color:#f27767 ">
+            <ion-row >
+              <ion-col class="rankL">
+                Rank A
+              </ion-col>
+            </ion-row >
+            <ion-row  >
+              <ion-col class="rankN">
+                123
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-card>
+
+
+
+
+  <ion-list no-padding >
+    <ion-item *ngFor="let date of datelists"   no-padding no-margin>
+
+     <button ion-item no-margin no-padding class="monthRanking" (click)="toggleMonthRank(date.date)" [ngClass]="{active: isRankShown(date.date)}"  detail-none>
+       <ion-row >
+         <ion-col col-11 padding-left="5px">
+           {{date.string}}
+         </ion-col>
+
+         <ion-col col-1 align-items-end>
+           <ion-icon color="#fffff" class="arrowIcon" icon-only [name]= "isRankShown(date.date) ?  'arrow-up'  :  'arrow-down' "></ion-icon>
+         </ion-col>
+       </ion-row>
+     </button>
+
+
+      <ion-item [hidden]="!isRankShown(date.date)" class ="ion-accordion" no-padding no-margin>
+
+        <ion-list no-padding no-margin no-lines>
+
+            <ion-row  class="subTitle">
+              {{prebillDate(date.date)}} - {{billDate(date.date)}}
+            </ion-row>
+
+
+
+
+          <ion-item  no-padding class="itempadding">
+            <ion-row align-items-end  class="rowborder">
+              <ion-col col-1 class ="utilityIcon">
+                <ion-icon icon-only name="flash" color="ele"></ion-icon>
+              </ion-col>
+
+              <ion-col col-4 align="right" class="totalC" style="color:#f0a007">
+                179
+              </ion-col>
+
+              <ion-col col-2 align="left" class="unitStyle" style="color:#f0a007" >
+                kWh
+              </ion-col>
+
+              <ion-col col-5 align="top" no-margin no-padding  style="color:#f0a007">
+                <ion-row >
+                  <ion-col class="rankL">
+                    Rank A
+                  </ion-col>
+                </ion-row >
+                <ion-row  >
+                  <ion-col class="rankN">
+                    1156
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <ion-item  no-padding class="itempadding">
+            <ion-row align-items-end  class="rowborder">
+              <ion-col col-1 class ="utilityIcon" style="font-size: 30px;">
+                <ion-icon icon-only name="water" color="water"></ion-icon>
+              </ion-col>
+
+              <ion-col col-4 align="right" class="totalC" style="color:#66c6ba; ">
+                16.2
+              </ion-col>
+
+              <ion-col col-2 align="left" class="unitStyle" style="color:#66c6ba" >
+                Cu M
+              </ion-col>
+
+              <ion-col col-5 align="top" no-margin no-padding  style="color:#66c6ba">
+                <ion-row >
+                  <ion-col class="rankL">
+                    Rank B
+                  </ion-col>
+                </ion-row >
+                <ion-row  >
+                  <ion-col class="rankN">
+                    1867
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+          <ion-item  no-padding class="itempadding">
+            <ion-row align-items-end  class="rowborder">
+              <ion-col col-1 class ="utilityIcon">
+                <ion-icon icon-only name="flame" color="gas"></ion-icon>
+              </ion-col>
+
+              <ion-col col-4 align="right" class="totalC" style="color:#f27767">
+                79
+              </ion-col>
+
+              <ion-col col-2 align="left" class="unitStyle" style="color:#f27767" >
+                kWh
+              </ion-col>
+
+              <ion-col col-5 align="top" no-margin no-padding  style="color:#f27767">
+                <ion-row >
+                  <ion-col class="rankL">
+                    Rank A
+                  </ion-col>
+                </ion-row >
+                <ion-row  >
+                  <ion-col class="rankN">
+                    123
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+
+
+          <button ion-item style="padding-left:10px;padding-right:10px;min-height:3.8rem; font-weight: 600; color:#294f66;" (click)="openIncentive(date.date)" no-margin detail-none>
+            <ion-row >
+              <ion-col col-1 align="center">
+                <ion-icon icon-only name="bowtie" color="primary"></ion-icon>
+              </ion-col>
+              <ion-col col-5 align="right" color="primary">
+                Incentive
+              </ion-col>
+
+              <ion-col col-5 align="right" color="primary">
+              $ 5.60
+              </ion-col>
+              <ion-col col-1 align="right" color="primary">
+                <ion-icon icon-only name="arrow-forward"></ion-icon>
+              </ion-col>
+            </ion-row>
+
+          </button>
+
+        </ion-list>
+
+
+      </ion-item>
+
+
+    </ion-item>
+
+
+
+  </ion-list>
+
+</ion-content>

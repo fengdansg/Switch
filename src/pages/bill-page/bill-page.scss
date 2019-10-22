@@ -1,0 +1,47 @@
+page-bill-page {
+  .monthBill{
+    background-color:#294f66;
+    color:#ffffff;
+    padding:0!important;
+    height:100%;
+    font-weight:600;
+    margin:0;
+    padding-top:36px;
+    padding-bottom:36px;
+
+
+  }
+  .subTitle{
+    padding-left:16px!important;
+    font-size:16px;
+    color:#FFFFFF;
+    font-weight:600;
+    text-align:left;
+    min-height: 3.5rem;
+    border-bottom:0.55px solid #c8c7cc;
+    padding-top:6px;
+    background-color:#849ba1;
+
+
+  }
+
+  .billText{
+    color:#294f66;
+    font-size:18px;
+    font-weight:500;
+  }
+
+  .rowborder{
+    border-bottom: 0.55px solid #c8c7cc;
+    padding-bottom: 3px;
+  }
+  .item.item-block .item-inner{
+   padding-right:0;
+ }
+
+  .totalText{
+    font-size:20px;
+    font-weight:bold;
+    color:#294f66;
+  }
+}

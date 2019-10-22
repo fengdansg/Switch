@@ -1,0 +1,94 @@
+<!--
+  Generated template for the ContactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title color="light">Contact Us</ion-title>
+    <ion-buttons end>
+      <button ion-button [disabled]="!isenabled">
+        Submit
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content style="background-color:#EEEEEE">
+
+  <ion-card class="contactCard">
+    <ion-grid>
+    <ion-row>
+      <ion-col class="contactTitle">
+        General Enquiries:
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="cardText" col-3>
+        Email:
+      </ion-col>
+      <ion-col col-9  class="cardText">
+        example@mail.com
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3  class="cardText">
+        Tel:
+      </ion-col>
+      <ion-col col-9  class="cardText">
+        <a  href="tel:+650000000">
+          +65-0000000
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col class="contactTitle">
+          Billing:
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="cardText" col-3>
+          Email:
+        </ion-col>
+        <ion-col col-9  class="cardText">
+          example@mail.com
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-3  class="cardText">
+          Tel:
+        </ion-col>
+        <ion-col col-9  class="cardText">
+          <a href="tel:+650000000">
+            +65-0000000
+          </a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card>
+
+  <ion-row>
+    <ion-col class="textboxTitle">
+      Send Feedback
+    </ion-col>
+  </ion-row>
+
+<ion-textarea class="textBox" [(ngModel)]="feedback" (ngModelChange)="checkFeedback()" placeholder="Please type your feedback here"></ion-textarea>
+  <a  class="faqButton" (click)="showFAQs()" >See FAQs</a>
+
+
+
+</ion-content>

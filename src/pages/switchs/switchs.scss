@@ -1,0 +1,106 @@
+page-switchs {
+  .toolbar-ios-primary .searchbar-ios .searchbar-input{
+  background:rgba(255,255,255,0.3);
+
+}
+
+  .switchMain{
+    //css for list in main page
+
+  }
+
+  .switchList{
+
+  }
+  .switchHeader{
+
+  }
+
+  .searchContent{
+    margin-top:0;
+  }
+  .scroll-content{
+    padding-top:0;
+    margin-top:0;
+
+  }
+  .switchToggle{
+    padding:0;
+    margin:0;
+
+  }
+
+  .item-ios .toggle-ios{
+    padding:0;
+  }
+  .scheduleTime{
+    font-size:12px;
+    padding-top:8px;
+    color:#F22613;
+    text-align:right;
+    vertical-align:middle;
+  }
+  .hourlycons{
+    text-align:right;
+
+  }
+  .switchBar{
+    padding-left:12px;
+  }
+
+  .switchName{
+    padding-left:12px;
+  }
+  .switchToggle{
+    margin-right:3px;
+    align-items:center;
+    vertical-align:bottom;
+  }
+
+  .groupTitle{
+    background-color:#294f66;
+    color:#ffffff;
+    padding:0!important;
+    font-weight:600;
+    margin:0;
+
+  }
+.groupSwitchs{
+  padding-left:0;
+}
+  .selectCol{
+    vertical-align:middle;
+    font-weight:500;
+    font-size:14px;
+    padding-left:8px;
+    padding:0;
+    margin:0;
+    max-width: 100% !important;
+    ion-select{
+      //padding:0;
+      margin:0;
+      max-width: 100% !important;
+      width:100% !important;
+    }
+  }
+  .toggleStyle{
+    padding-right:16px;
+  }
+  .item-ios.item-block .item-inner{
+    padding-right:0;
+  }
+  .item-md.item-block .item-inner{
+    padding-right:0;
+  }
+
+  .selectType {
+  .ion-select{
+    max-width:100% !important;
+  }
+  }
+
+  .item-wp.item-block .item-inner{
+    padding-right:0;
+  }
+
+}

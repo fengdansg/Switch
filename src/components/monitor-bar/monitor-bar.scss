@@ -1,0 +1,38 @@
+monitor-bar {
+
+  // default is blue color
+  .progress-outer {
+    width: 100% !important;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+
+    text-align: center;
+    background-color: #ebebeb;
+    border: 1px solid;
+    border-color: #fbb123;
+    color: #fff;
+    border-radius: 0px;
+
+  }
+  .totaltext {
+    text-align: left;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding-left: 8px;
+
+  }
+  .numbertext {
+    align-items: right;
+    font-size: 14px;
+
+  }
+  .progress-inner {
+    min-width: 1%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0px;
+    min-height: 25px;
+    //background-color: #39aea9;
+  }
+}

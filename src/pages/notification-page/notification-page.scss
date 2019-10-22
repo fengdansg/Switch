@@ -1,0 +1,31 @@
+page-notification-page {
+
+  .iconType{
+    font-size:45px;
+    color:#294f66;
+  }
+
+  .timeformat{
+    color:#294f66;
+    font-size:16px;
+  }
+
+  .textformat{
+    color:#294f66;
+    font-size:18px;
+    font-weight:500;
+    padding-right:8px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+  }
+  .textOpenformat{
+    color:#294f66;
+    font-size:18px;
+    font-weight:500;
+    padding-right:8px;
+    white-space:pre-line;
+    word-wrap:break-word;
+  }
+
+}

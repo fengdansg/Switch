@@ -1,0 +1,256 @@
+<!--
+  Generated template for the AnalyticsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title color = "light" >
+     Analytics
+    </ion-title>
+
+    <ion-buttons left>
+      <button ion-button icon-only (click)="viewMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-row class="timelabel" no-margin no-padding>
+    <ion-col col-3 no-margin no-padding align="right">
+      <ion-icon icon-only class="calendar" name="calendar" color="primary">
+      </ion-icon>
+
+    </ion-col >
+
+    <ion-col col-6 no-margin no-padding>
+
+      <ion-datetime displayFormat="DD-MMM-YYYY" [(ngModel)]="chosenDate" align="center" (ngModelChange)="updateTable()" >
+      </ion-datetime>
+
+    </ion-col>
+
+    <ion-col col-3 no-margin no-padding >
+
+    </ion-col>
+  </ion-row>
+
+
+  <ion-list no-lines>
+
+    <ion-item  no-padding >
+      <ion-row class="rowborder" align-items-center>
+        <ion-col col-4 no-padding no-margin align="center"  class="tabletitle">
+          Per {{selectTitle}}
+        </ion-col >
+
+        <ion-col col-3 no-padding no-margin align="center"  no-margin no-padding>
+
+          <button ion-button icon-only (mouseover)="changeeletooltip()" (mouseleave)="disabeeleTooltips()" clear >
+            <ion-icon icon-only    name="flash" color="primary"  style="font-size:1.8em"></ion-icon>
+          </button>
+
+
+
+        </ion-col>
+        <ion-col col-2 no-padding no-margin align="center" >
+
+          <button ion-button icon-only (mouseover)="changewatertooltip()" (mouseleave)="disabewaterTooltips()"   clear >
+            <ion-icon icon-only name="water" color="primary" style="font-size:1.6em"></ion-icon>
+          </button>
+
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center">
+
+          <button ion-button icon-only (mouseover)="changegastooltip()" (mouseleave)="disabegasTooltips()"   clear >
+            <ion-icon icon-only name="flame" color="primary" style="font-size:1.8em"></ion-icon>
+          </button>
+
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item  no-padding>
+      <ion-row class="rowborder" align-items-center>
+
+        <ion-col col-4 no-padding no-margin align="center" >
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Your
+            </ion-col>
+          </ion-row>
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Average
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center" class="tabletext" >
+          {{selectData.ele.userAve.toFixed(1)}}
+        </ion-col>
+        <ion-col col-2 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.water.userAve.toFixed(2)}}
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.gas.userAve.toFixed(1)}}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item  no-padding>
+      <ion-row class="rowborder" align-items-center>
+
+        <ion-col col-4 no-padding no-margin align="center" >
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              National
+            </ion-col>
+          </ion-row>
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Average
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center" class="tabletext" >
+          {{selectData.ele.NationalAve.toFixed(1)}}
+        </ion-col>
+        <ion-col col-2 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.water.NationalAve.toFixed(2)}}
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.gas.NationalAve.toFixed(1)}}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item  no-padding>
+      <ion-row class="rowborder" align-items-center>
+
+        <ion-col col-4 no-padding no-margin align="center" >
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Neighbour
+            </ion-col>
+          </ion-row>
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Average
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center" class="tabletext" >
+          {{selectData.ele.NeighbourAve.toFixed(1)}}
+        </ion-col>
+        <ion-col col-2 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.water.NeighbourAve.toFixed(2)}}
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.gas.NeighbourAve.toFixed(1)}}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item  no-padding>
+      <ion-row class="rowborder" align-items-center>
+
+        <ion-col col-4 no-padding no-margin align="center" >
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Your
+            </ion-col>
+          </ion-row>
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Peak Usage
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center" class="tabletext" >
+          {{selectData.ele.userPeakUsage.toFixed(1)}}
+        </ion-col>
+        <ion-col col-2 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.water.userPeakUsage.toFixed(2)}}
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.gas.userPeakUsage.toFixed(1)}}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item  no-padding>
+      <ion-row  style="padding-top:2px; margin-left:16px; margin-right:16px;" align-items-center>
+
+        <ion-col col-4 no-padding no-margin align="center" >
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Your
+            </ion-col>
+          </ion-row>
+          <ion-row no-margin no-padding >
+            <ion-col no-padding no-margin align="center" class="tablesubTitle">
+              Peak {{selectTitle}}
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center" class="tabletext" >
+          {{selectData.ele.userPeakTime}}
+        </ion-col>
+        <ion-col col-2 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.water.userPeakTime}}
+        </ion-col>
+        <ion-col col-3 no-padding no-margin align="center"  class="tabletext">
+          {{selectData.gas.userPeakTime}}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-row style="padding-left:16px;padding-right:16px">
+    <ion-segment class="selectPeriod" [(ngModel)]="selectPeriod" (ngModelChange)="updateTable()">
+      <ion-segment-button value="day">
+        DAY
+      </ion-segment-button>
+      <ion-segment-button value="month">
+        MONTH
+      </ion-segment-button>
+      <ion-segment-button value="year">
+        YEAR
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-row>
+
+
+  <canvas height="78.68px" width="116.36px" style="position:absolute;left:37%;top:0.5%;z-index:100;width:18%;height:8%;" [hidden]="!showeleTooltips" #eleTooltipsCanvas></canvas>
+  <canvas height="78.68px" width="116.36px" style="position:absolute;left:55%;top:0.5%;z-index:100;width:18%;height:8%;" [hidden]="!showwaterTooltips" #waterTooltipsCanvas></canvas>
+  <canvas height="78.68px" width="116.36px" style="position:absolute;left:73%;top:0.5%;z-index:100;width:18%;height:8%;" [hidden]="!showgasTooltips" #gasTooltipsCanvas></canvas>
+
+   <ion-card>
+     <ion-row>
+       <ion-col class="analyticstext">
+         Your average electricity consumption decreased by 8% compared to last month.
+       </ion-col>
+     </ion-row>
+
+     <ion-row>
+       <ion-col class="analyticstext">
+         Your average gas consumption today increased by 8% compared to yesterday.
+       </ion-col>
+     </ion-row>
+
+     <ion-row>
+       <ion-col class="analyticstext">
+         You exceeded your set reference limit for water consumption between 6pm-7pm yesterday.
+       </ion-col>
+     </ion-row>
+
+   </ion-card>
+</ion-content>

@@ -1,0 +1,54 @@
+page-tips-page {
+.tipsDropdown{
+  background-color:#294f66;
+  color:#ffffff;
+  padding:0!important;
+  font-weight:600;
+  margin:0;
+  font-size:20px;
+}
+
+  .arrowIcon{
+    font-size:20px;
+  }
+
+  .rowborder{
+    border-bottom: 0.55px solid #c8c7cc;
+    color:#294f66;
+    font-size:18px;
+    padding-left:16px;
+    padding-right:10px;
+    padding-top:0;
+    padding-bottom:8px;
+    font-weight:500;
+  }
+
+ .textPadding{
+   padding-left:16px;
+   padding-top:6px;
+  padding-bottom:10px;
+   padding-right:10px;
+   font-size:18px;
+   color:#294f66;
+   font-weight:500;
+ }
+
+  .item{
+    padding-left:0;
+  }
+
+  .timeformat{
+    margin-left:16px;
+    border-bottom: 0.55px solid #c8c7cc;
+    padding-top:8px;
+    color:#294f66;
+    font-size:16px;
+  }
+  .item-ios.item-block .item-inner{
+    padding-right:0;
+  }
+
+  .item-md.item-block .item-inner{
+    padding-right:0;
+  }
+}

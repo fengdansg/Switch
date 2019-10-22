@@ -1,0 +1,102 @@
+page-analytics-page {
+
+  .card-ios{
+    margin: 10px;
+    width:calc(100% - 20px);
+  }
+  .datetime-md{
+    padding:10px 8px 13px 16px;
+  }
+  .datetime-ios{
+    padding:10px 8px 13px 16px;
+  }
+  .datetime-wp{
+    padding:4px 8px 13px 16px;
+  }
+  .button-ios{
+    margin: 0.2rem 0.2rem;
+    padding: 0 1em;
+    height: 2.3em;
+
+  }
+  .datetime-text{
+    color: #294f66 ;
+    font-weight: bold;
+    font-size:15px;
+  }
+  .segment-md .segment-button{
+    height:3.2rem;
+    line-height:3rem;
+    font-size:1.4rem;
+    ion-icon{
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+  .timelabel{
+    height:40px;
+    text-align:center;
+
+
+  }
+  .calendar{
+    margin-top:8px;
+    font-size:140%;
+  }
+.tabletitle{
+  font-size:16px;
+  color:#294f66;
+  font-weight:bold;
+
+}
+
+  .tabletext{
+    font-size:18px;
+    color:#294f66;
+    //font-weight:500;
+    vertical-align:middle;
+
+
+  }
+  .tablesubTitle{
+    font-size:17px;
+    color:#294f66;
+    font-weight:600;
+    vertical-align:middle;
+
+
+  }
+
+  .rowborder{
+    border-bottom: 0.55px solid #c8c7cc;
+    padding-bottom: 2px;
+    padding-top:2px;
+    margin-left:16px;
+    margin-right:16px;
+  }
+  .item{
+    min-height:13px;
+  }
+  .selectPeriod{
+    height: 40%;
+
+
+  }
+  .button-md{
+    margin:0;
+
+    width:100%;
+
+  }
+  .analyticstext{
+    font-size:16px;
+    color: #294f66;
+    padding-top:10px;
+    padding-left:16px;
+    padding-right:16px;
+    line-height:20px;
+    padding-bottom:10px;
+
+
+  }
+}

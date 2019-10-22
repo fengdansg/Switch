@@ -1,0 +1,43 @@
+<!--
+  Generated template for the NotificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title color="light">Notification</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#EEEEEE">
+
+
+  <ion-list no-padding style="margin-top:20px" >
+
+    <ion-item no-padding *ngFor="let mail of mails">
+      <button ion-item (click)="toggleMail(mail.id)" detail-none>
+        <ion-row>
+          <ion-col col-2 >
+            <ion-icon [name]= "mail.read?  'mail-open'  :  'mail' " class="iconType" [style.color]="mail.read? '#79a5b1':'#294f66'">
+            </ion-icon>
+          </ion-col>
+          <ion-col col-10>
+            <ion-row class="timeformat" [style.color]="(!isMailShown(mail.id))&&mail.read? '#79a5b1':'#294f66'" >
+              {{mail.date}}
+            </ion-row>
+            <ion-row >
+              <ion-col [ngClass]="isMailShown(mail.id)? 'textOpenformat':'textformat'" [style.color]="(!isMailShown(mail.id))&&mail.read? '#79a5b1':'#294f66'">{{mail.content}}
+              </ion-col>
+
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

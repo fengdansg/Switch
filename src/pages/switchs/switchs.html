@@ -1,0 +1,248 @@
+<!--
+  Generated template for the SwitchsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary" >
+    <ion-searchbar
+      [(ngModel)]="searchTerm"
+      [showCancelButton]="true"
+      cancelButtonText="Cancel"
+      [autocomplete]="on"
+      placeholder="Search Switch"
+      (ionInput)="searchSwitchsName()"
+      (ionCancel)="onCancel()"
+      (ionFocus) ="activeSearch()">
+    </ion-searchbar>
+
+
+    <ion-buttons left [hidden]="searchList" >
+      <button ion-button icon-only (click)="viewMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons right [hidden]="searchList" >
+      <button ion-button icon-only (click)="addSwitchs()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+  <ion-segment [(ngModel)]="switchsForm" [hidden]="searchList" >
+    <ion-segment-button value="all" >
+      All
+    </ion-segment-button>
+    <ion-segment-button value="groups" >
+      Groups
+    </ion-segment-button>
+
+  </ion-segment>
+
+</ion-header>
+
+
+
+<ion-content no-padding [hidden]="searchList" [ngSwitch]="switchsForm">
+  <ion-row no-padding no-margin>
+    <ion-col col-6 no-padding no-margin>
+      <ion-item class="selectCol" no-lines>
+        <ion-select [(ngModel)]="displayType" interface="popover" class="selectType" (ionChange)="changeSelect()">
+          <ion-option value="month">This Month ($)</ion-option>
+          <ion-option value="realtime">Real Time (W)</ion-option>
+          <ion-option value="day">Today ($)</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+    </ion-col>
+    <ion-col col-6>
+      <monitor-bar [progress]=100 [myColor]="testColor" [powerCons]="displayTotal" [unitD]="displayUnit"></monitor-bar>
+    </ion-col>
+  </ion-row>
+
+  <ion-list no-padding class="switchMain" *ngSwitchCase="'groups'">
+    <ion-item *ngFor="let swgroup of switchGroups" no-padding class="groupBar">
+      <button ion-item no-margin no-padding class="groupTitle" (click)="toggleMonthRank(swgroup)" [ngClass]="{active: isRankShown(swgroup)}"  detail-none>
+        <ion-row >
+          <ion-col col-11 padding-left="5px">
+            {{swgroup}}
+          </ion-col>
+
+          <ion-col col-1 align-items-end>
+            <ion-icon color="#fffff" class="arrowIcon" icon-only [name]= "isRankShown(swgroup) ?  'arrow-up'  :  'arrow-down' "></ion-icon>
+          </ion-col>
+        </ion-row>
+      </button>
+
+
+      <ion-item [hidden]="!isRankShown(swgroup)" no-padding no-margin class="groupSwitchs" >
+        <ion-list  no-padding no-margin >
+          <ion-item *ngIf="isEmpty(sortedGroupLists(swgroup))" no-lines>
+            There is no switch adding to this group!
+          </ion-item>
+          <ion-item *ngFor="let sw of sortedGroupLists(swgroup)" class="groupSwitchs">
+            <ion-row no-padding no-margin>
+
+              <ion-col no-padding no-margin>
+              <button ion-item no-padding no-margin no-border detail-none no-lines (click)="openSwitchAnalyticPage(sw)">
+                <ion-row class="switchRow" *ngIf="shownSwitch(sw,swgroup)">
+                  <ion-col col-8 class="switchName" >
+                    {{sw.name}}
+                  </ion-col >
+                  <ion-col col-4 class="scheduleTime">
+                    {{sw.schedule[0].event}} {{sw.schedule[0].time}}
+
+                  </ion-col>
+                  <!--              <ion-col col-3  class="hourlycons" [hidden]="!sw.status" [style.color]="(sw.power.hour<3)?warningColor:textColor">
+                                  {{sw.power.hour}}W
+                                </ion-col> -->
+
+
+                </ion-row>
+
+                <ion-row [hidden]="!sw.status" *ngIf="shownSwitch(sw,swgroup)">
+                  <ion-col  class="switchBar">
+
+                    <progress-bar [unitD]="displayUnit" [progress]="(sw.power.display/totalHourCons)*100" [myColor]="(sw.power.display<3)? warningColor:testColor" [powerCons]="sw.power.display" [textCol]="(sw.power.display<3)?warningColor:textColor"></progress-bar>
+                  </ion-col>
+
+
+                </ion-row>
+              </button>
+
+              </ion-col>
+              <ion-col col-2 class="switchToggle" [style.padding-top]="(sw.status)?'24px':'0px'">
+                <ion-item no-lines no-padding no-margin align-items-start >
+
+                  <ion-toggle no-padding no-margin class="toggleStyle" [(ngModel)]="sw.status"></ion-toggle>
+                </ion-item>
+
+              </ion-col>
+            </ion-row>
+
+
+
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+    </ion-item>
+  </ion-list>
+
+
+<ion-list no-padding class="switchMain" *ngSwitchCase="'all'">
+ <!-- <ion-list-header no-padding class="switchHeader" >
+
+
+
+
+
+  </ion-list-header>-->
+
+  <ion-item  *ngFor="let sw of sortedLists" no-padding class="switchList" >
+    <ion-row no-padding no-margin>
+      <ion-col no-padding no-margin>
+        <button ion-item no-margin no-padding no-lines no-border detail-none (click)="openSwitchAnalyticPage(sw)">
+          <ion-row class="switchRow">
+
+            <ion-col col-8 class="switchName" >
+              {{sw.name}}
+            </ion-col >
+            <ion-col col-4 class="scheduleTime">
+              {{sw.schedule[0].event}} {{sw.schedule[0].time}}
+
+            </ion-col>
+            <!--   <ion-col col-3  class="hourlycons" [hidden]="!sw.status" [style.color]="(sw.power.hour<3)?warningColor:textColor">
+                 {{sw.power.hour}}W
+               </ion-col>-->
+
+            <!--<ion-col col-2 class="switchToggle" [hidden]="sw.status">
+              <ion-item no-lines no-padding no-margin align-items-start >
+                <ion-toggle no-padding no-margin class="toggleStyle" [(ngModel)]="sw.status"></ion-toggle>
+              </ion-item>
+            </ion-col>-->
+          </ion-row>
+
+          <ion-row [hidden]="!sw.status">
+            <ion-col  class="switchBar">
+              <progress-bar [unitD]="displayUnit" [progress]="(sw.power.display/displayTotal)*100" [myColor]="(sw.power.display<3)? warningColor:testColor" [powerCons]="sw.power.display" [textCol]="(sw.power.display<3)?warningColor:textColor"></progress-bar>
+            </ion-col>
+          </ion-row>
+        </button>
+
+      </ion-col>
+
+      <ion-col col-2 class="switchToggle" [style.padding-top]="(sw.status)?'24px':'0px'">
+        <ion-item no-lines no-padding no-margin align-items-start >
+          <ion-toggle no-padding no-margin class="toggleStyle" [(ngModel)]="sw.status"></ion-toggle>
+        </ion-item>
+      </ion-col>
+
+
+    </ion-row>
+
+
+
+
+
+
+  </ion-item>
+
+</ion-list>
+
+
+</ion-content>
+
+<ion-content no-padding class="searchContent" [hidden]="!searchList">
+  <ion-list no-padding>
+    <ion-item *ngFor="let sw of switchitems" no-padding class="switchList">
+      <ion-row no-padding no-margin>
+        <ion-col no-padding no-margin>
+          <button ion-item no-margin no-padding no-lines no-border detail-none (click)="openSwitchAnalyticPage(sw)">
+            <ion-row class="switchRow">
+
+              <ion-col col-8 class="switchName" >
+                {{sw.name}}
+              </ion-col >
+              <ion-col col-4 class="scheduleTime">
+                {{sw.schedule[0].event}} {{sw.schedule[0].time}}
+
+              </ion-col>
+              <!--   <ion-col col-3  class="hourlycons" [hidden]="!sw.status" [style.color]="(sw.power.hour<3)?warningColor:textColor">
+                   {{sw.power.hour}}W
+                 </ion-col>-->
+
+              <!--<ion-col col-2 class="switchToggle" [hidden]="sw.status">
+                <ion-item no-lines no-padding no-margin align-items-start >
+                  <ion-toggle no-padding no-margin class="toggleStyle" [(ngModel)]="sw.status"></ion-toggle>
+                </ion-item>
+              </ion-col>-->
+            </ion-row>
+
+            <ion-row [hidden]="!sw.status">
+              <ion-col  class="switchBar">
+                <progress-bar [unitD]="displayUnit" [progress]="(sw.power.display/displayTotal)*100" [myColor]="(sw.power.display<3)? warningColor:testColor" [powerCons]="sw.power.display" [textCol]="(sw.power.display<3)?warningColor:textColor"></progress-bar>
+              </ion-col>
+            </ion-row>
+          </button>
+
+        </ion-col>
+
+        <ion-col col-2 class="switchToggle" [style.padding-top]="(sw.status)?'24px':'0px'">
+          <ion-item no-lines no-padding no-margin align-items-start >
+            <ion-toggle no-padding no-margin class="toggleStyle" [(ngModel)]="sw.status"></ion-toggle>
+          </ion-item>
+        </ion-col>
+
+
+      </ion-row>
+
+
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,16 @@
+<!-- Generated template for the ProgressBar component -->
+<div class="progress-outer" [style.border-color]="myColor">
+  <div class="progress-inner" [style.width]="progress + '%'" [style.background-color]="myColor">
+    <ion-row>
+      <ion-col col-6 class="totaltext">
+        Total
+      </ion-col>
+      <ion-col col-6 class="numbertext" *ngIf="unitD=='W'">
+        {{powerCons.toFixed(2)}} W
+      </ion-col>
+      <ion-col col-6 class="numbertext" *ngIf="unitD=='$'">
+       $ {{powerCons.toFixed(2)}}
+      </ion-col>
+    </ion-row>
+  </div>
+</div>
